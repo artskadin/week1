@@ -1,8 +1,8 @@
 {
   "headers": {
     "/*": {
-      "X-Author": "artskadin" 
+      "X-Author": "artskadin",
+      "Access-Control-Allow-Origin":"*"   
     }
   }
-
 }
