@@ -9,7 +9,10 @@ const CORS = {
   'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers'
 };
 const s = Server((req, res) => {
-    if (req.url.startsWith('/result4')) {
+    if (req.url === '/result4/') {
+          res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', ...CORS });
+          res.write('<h1><i>Да</i></h1>\n');
+    } else if (req.url.startsWith('/result4')) {
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...CORS });
 //         const params = req.url.substring(1 + req.url.indexOf('?'));
         res.write(req.headers['x-test']);           
