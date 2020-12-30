@@ -9,7 +9,7 @@ const CORS = {
   'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers'
 };
 const s = Server((req, res) => {
-    if (req.url.startsWith('/result4/')) {
+    if (req.url.startsWith('/result4')) {
         const params = req.url.substring(1 + req.url.indexOf('?'));
         res.write(params);           
     } else {
