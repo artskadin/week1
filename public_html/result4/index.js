@@ -10,8 +10,9 @@ const CORS = {
 };
 const s = Server((req, res) => {
     if (req.url.startsWith('/result4')) {
-        const params = req.url.substring(1 + req.url.indexOf('?'));
-        res.write(params);           
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...CORS });
+//         const params = req.url.substring(1 + req.url.indexOf('?'));
+        res.write(req.headers['x-test']);           
     } else {
         // return finalhandler(req, res)();
         return serve(req, res, finalhandler(req, res));
