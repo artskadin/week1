@@ -19,7 +19,7 @@
     const input = document.getElementById('inp')
     btn.addEventListener('click', async () => {
       const data = await fetch(input.value)
-      input.value = data.text()
+      input.value = await data.text()
     })
   </script>
 </body>
